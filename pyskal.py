@@ -57,6 +57,10 @@ def apply_symmetry(array):
     return full
 
 
+def generate_symmetry_image(text_input):
+    return apply_symmetry(get_array_image(text_input))
+
+
 if __name__ == '__main__':
 
     import argparse
@@ -66,15 +70,15 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     if not args.string:
-        print("Correct use:\n$  python3 plot_string.py STRING_OF_CHOICE")
+        print("Correct use:\n$  python3 pyskal.py STRING_OF_CHOICE")
         exit()
 
     user_input = args.string
 
     print("Running with input: `{}`".format(user_input))
 
-    array = get_array_image(user_input)
-    array = apply_symmetry(array)
+    array = generate_symmetry_image(user_input)
 
     plt.imshow(array, cmap="gray")
+    plt.axis('off')
     plt.show()

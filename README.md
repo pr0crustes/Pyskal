@@ -10,6 +10,7 @@ Pyskal dependencies are:
 # Examples
 The following images were generated using the title as seed.
 <br>
+<br>
 <img src="samples/0_PR0CRUSTES.png" >
 <br>
 <br>
